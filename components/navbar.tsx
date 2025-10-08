@@ -1,20 +1,26 @@
-import Link from 'next/link'
+// components/navbar.tsx
+import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-white shadow-md px-6 py-4 flex justify-between items-center">
-      <div className="text-2xl font-semibold text-blue-700">
-        Portail Myopie
-      </div>
-      <div className="flex space-x-6">
-        <Link href="/" className="text-gray-700 hover:text-blue-600">
-          Accueil
+    <nav className="w-full border-b">
+      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+        <Link href="/" className="text-lg font-semibold">
+          Portail Myopie
         </Link>
-        <Link href="/pro" className="text-gray-700 hover:text-blue-600">
-          Pro
-        </Link>
-        <Link href="/public" className="text-gray-700 hover:text-blue-600">
-          Grand Public
-        </Link>
+
+        <div className="flex items-center gap-4">
+          <Link href="/professionnels" className="hover:underline">
+            Professionnels
+          </Link>
+          <Link href="/grand-public" className="hover:underline">
+            Grand public
+          </Link>
+          <Link href="/contact" className="hover:underline">
+            Contact
+          </Link>
+        </div>
       </div>
     </nav>
+  );
+}
