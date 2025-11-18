@@ -10,7 +10,7 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-4">
-          <Link href="/professionnels" className="hover:underline">
+          <Link href="/pro" className="hover:underline">
             Professionnels
           </Link>
           <Link href="/grand-public" className="hover:underline">
@@ -19,6 +19,12 @@ export default function Navbar() {
           <Link href="/contact" className="hover:underline">
             Contact
           </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
         </div>
       </div>
     </nav>
