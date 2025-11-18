@@ -1,0 +1,137 @@
+import React from "react";
+import Link from "next/link";
+import { ExternalLink, Users } from "lucide-react";
+
+export default function About() {
+  return (
+    <main className="min-h-screen text-slate-100 relative">
+
+      {/* Background harmonisé */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-900 via-slate-950 to-sky-900 opacity-95" />
+
+      <div className="mx-auto max-w-4xl px-6 py-12">
+        {/* HEADER */}
+        <header className="mb-10">
+          <h1 className="text-3xl font-bold tracking-tight text-sky-300 mb-2 flex items-center gap-3">
+            <Users className="h-7 w-7 text-sky-400" />
+            À propos du Portail Myopie
+          </h1>
+
+          <p className="text-slate-300 text-sm max-w-2xl">
+            Une initiative académique issue du service d’ophtalmologie du 
+            CHU de Lille, destinée à proposer des ressources fiables aux 
+            professionnels de santé et aux familles.
+          </p>
+        </header>
+
+        {/* CONTENU */}
+        <section className="mb-10 rounded-3xl bg-slate-900/60 border border-slate-800 p-6 shadow-xl backdrop-blur-xl">
+
+          {/* Service */}
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold text-sky-200 mb-2">
+              Service d’Ophtalmologie — CHU de Lille
+            </h2>
+            <p className="text-sm text-slate-300 mb-3">
+              Le Portail Myopie est développé dans la continuité des actions
+              du service d’ophtalmologie du CHU de Lille, engagé dans la prise 
+              en charge de la myopie évolutive chez l’enfant.
+            </p>
+
+            <a
+              href="https://www.chu-lille.fr/soins/ophtalmologie"
+              target="_blank"
+              className="text-sky-300 hover:text-sky-200 text-sm underline underline-offset-2 flex items-center gap-1"
+            >
+              Site officiel du service d’ophtalmologie du CHU de Lille
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+
+          {/* Marion Sukno */}
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold text-sky-200 mb-1">
+              Dr Marion Sukno
+            </h2>
+            <p className="text-sm text-slate-300">
+              Ophtalmologiste — CHU de Lille  
+              <br />
+              Encadrante scientifique du projet et référente clinique 
+              sur la myopie évolutive.
+            </p>
+          </div>
+
+          {/* Nassim — Photo + LinkedIn */}
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold text-sky-200 mb-3">
+              Mohamed Nassim Chadli
+            </h2>
+
+            <div className="flex items-center gap-5">
+              {/* Photo intégrée à partir du dossier /public */}
+              <img
+                src="/nassim.jpg"
+                alt="Portrait de Mohamed Nassim Chadli"
+                className="w-28 h-28 object-cover rounded-2xl border border-slate-700 shadow-lg"
+              />
+
+              <div>
+                <p className="text-sm text-slate-300 mb-2">
+                  Interne en ophtalmologie — CHU de Lille  
+                  <br />
+                  Auteur du Portail Myopie et de la thèse consacrée 
+                  à l’évaluation des stratégies combinées de freination.
+                </p>
+
+                <a
+                  href="https://dz.linkedin.com/in/chadli-mohamed-nassim?trk=people-guest_people_search-card"
+                  target="_blank"
+                  className="text-sky-300 hover:text-sky-200 text-sm underline underline-offset-2 flex items-center gap-1"
+                >
+                  Profil LinkedIn
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Thèse */}
+          <div>
+            <h2 className="text-xl font-semibold text-sky-200 mb-2">
+              Thèse de Médecine
+            </h2>
+            <p className="text-sm text-slate-300 mb-3">
+              Ce portail repose sur les données et les résultats de la thèse réalisée 
+              au CHU de Lille :
+              <br />
+              <strong>
+                « Évaluation de l’atropine 0,05% vs 0,01% en association à une 
+                méthode optique dans la freination de la myopie évolutive ».
+              </strong>
+            </p>
+
+            <a
+              href="https://pepite-depot.univ-lille.fr/LIBRE/Th_Medecine/2025/2025ULILM250.pdf"
+              target="_blank"
+              className="text-sky-300 hover:text-sky-200 text-sm underline underline-offset-2 flex items-center gap-1"
+            >
+              📄 Lire la thèse (PDF — Université de Lille)
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+
+        </section>
+
+        {/* RETOUR */}
+        <div className="text-center mt-6">
+          <Link
+            href="/pro"
+            className="inline-flex items-center justify-center rounded-full border border-slate-600 px-4 py-2 text-sm text-slate-300 hover:bg-slate-800/80 hover:border-slate-400 transition"
+          >
+            ← Retour à l’espace professionnels
+          </Link>
+        </div>
+      </div>
+    </main>
+  );
+}
